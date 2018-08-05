@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+
+    <dubbo:application name="${dubbo.svensteel.app.name}" owner="${dubbo.svensteel.app.owner}"
+                       organization="${dubbo.svensteel.app.organization}"
+                       architecture="${dubbo.svensteel.app.architecture}"/>
+    <dubbo:registry address="${dubbo.svensteel.app.registry.address1}"
+                    protocol="${dubbo.svensteel.app.registry.protocol}"/>
+    <dubbo:registry address="${dubbo.svensteel.app.registry.address2}"
+                    protocol="${dubbo.svensteel.app.registry.protocol}"/>
+    <dubbo:registry address="${dubbo.svensteel.app.registry.address3}"
+                    protocol="${dubbo.svensteel.app.registry.protocol}"/>
+    <dubbo:protocol name="${dubbo.svensteel.app.protocol.name}" host="${dubbo.svensteel.app.protocol.host}"
+                    port="${dubbo.svensteel.app.protocol.port}" dispatcher="${dubbo.svensteel.app.protocol.dispatcher}"
+                    threadpool="${dubbo.svensteel.app.protocol.threadpool}"
+                    threads="${dubbo.svensteel.app.protocol.threads}"/>
+
+    <!--<dubbo:service interface="com.wecash.svensteel.pay.LianlianService" ref="dubboLianlianService"/>-->
+    <!--<bean id="dubboLianlianService" class="com.wecash.svensteel.pay.impl.LianlianServiceImpl" />-->
+
+</beans>
